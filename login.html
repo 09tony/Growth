@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Client Login · Tony Styles GrowthEngine</title>
+<link rel="stylesheet" href="css/style.css"/>
+<style>
+body{display:flex;align-items:center;justify-content:center;min-height:100vh;background:var(--black)}
+.login-wrap{width:100%;max-width:420px;padding:24px}
+.login-card{background:var(--card);border:1px solid var(--border);border-radius:var(--r-lg);padding:40px;position:relative;overflow:hidden}
+.login-card::before{content:'';position:absolute;top:-80px;right:-80px;width:220px;height:220px;border-radius:50%;background:radial-gradient(circle,rgba(201,168,76,.07) 0%,transparent 70%)}
+.login-logo{text-align:center;margin-bottom:32px}
+.err-box{background:rgba(232,65,42,.1);border:1px solid rgba(232,65,42,.3);border-radius:8px;padding:10px 14px;font-size:13px;color:var(--red);display:none;margin-bottom:16px}
+.demo-hint{background:rgba(10,191,188,.07);border:1px solid rgba(10,191,188,.2);border-radius:8px;padding:12px 14px;font-size:13px;margin-top:16px;text-align:center}
+.demo-hint strong{color:var(--teal)}
+.demo-hint button{background:none;border:none;color:var(--teal);font-size:13px;font-weight:700;cursor:pointer;text-decoration:underline;font-family:var(--font-b)}
+</style>
+</head>
+<body>
+<div class="login-wrap">
+  <div class="login-logo">
+    <a href="index.html" class="logo" style="justify-content:center;align-items:center">Tony Styles<span class="logo-sub" style="text-align:center">GrowthEngine · Copywriting</span></a>
+  </div>
+  <div class="login-card">
+    <h3 style="margin-bottom:6px;font-size:24px">Client Portal</h3>
+    <p style="font-size:14px;margin-bottom:28px">Sign in to view your projects, messages, and invoices.</p>
+    <div class="err-box" id="loginErr"></div>
+    <form id="loginForm">
+      <div class="fg"><label>Email address <span>*</span></label><input type="email" class="fc" id="loginEmail" placeholder="you@yourbrand.com" required/></div>
+      <div class="fg"><label>Password <span>*</span></label><input type="password" class="fc" id="loginPass" placeholder="Your password" required/></div>
+      <button type="submit" class="btn btn-gold btn-full" style="margin-top:8px">Sign In to Portal →</button>
+    </form>
+    <div class="demo-hint">
+      <strong>Demo Mode</strong> — Try the portal without a real account.<br/>
+      <button id="demoFill">Click to autofill demo credentials</button>
+    </div>
+    <div style="text-align:center;margin-top:20px">
+      <p style="font-size:13px">Not a client yet? <a href="contact.html" style="color:var(--gold);font-weight:700">Apply to work with Tony →</a></p>
+    </div>
+  </div>
+  <div style="text-align:center;margin-top:20px"><a href="index.html" style="font-size:13px;color:var(--slate)">← Back to main site</a></div>
+</div>
+<script src="js/main.js"></script>
+</body></html>

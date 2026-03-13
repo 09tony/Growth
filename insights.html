@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Insights & Free Tools · Tony Styles GrowthEngine</title>
+<link rel="stylesheet" href="css/style.css"/>
+<style>
+.tool-card { background:var(--card); border:1px solid var(--border); border-radius:var(--radius-md); padding:32px; }
+.tool-card.gold { border-color:rgba(201,168,76,0.25); }
+.tool-card.teal { border-color:rgba(10,191,188,0.25); }
+#auditResult, #slResult { display:none; margin-top:20px; }
+.article-card { background:var(--card); border:1px solid var(--border); border-radius:var(--radius-md); overflow:hidden; transition:transform 0.3s; }
+.article-card:hover { transform:translateY(-4px); }
+.article-img { height:160px; background:linear-gradient(135deg,var(--ink2),var(--card)); display:flex; align-items:center; justify-content:center; font-size:48px; }
+.article-body { padding:22px; }
+.article-meta { display:flex; gap:10px; margin-bottom:12px; align-items:center; }
+.article-date { font-size:12px; color:var(--slate); }
+.article-title { font-size:17px; font-weight:700; color:var(--white); margin-bottom:8px; line-height:1.4; }
+.article-excerpt { font-size:13px; color:rgba(248,250,255,0.6); line-height:1.6; margin-bottom:16px; }
+</style>
+</head>
+<body>
+
+<nav class="nav"><div class="container">
+  <a href="index.html" class="logo">Tony Styles<span class="logo-sub">GrowthEngine · Copywriting</span></a>
+  <div class="nav-links"><a href="about.html">About</a><a href="services.html">Services</a><a href="results.html">Results</a><a href="insights.html" class="active">Insights</a><a href="contact.html" class="nav-cta">Get Free Audit</a></div>
+  <button class="hamburger"><span></span><span></span><span></span></button>
+</div></nav>
+<div class="mob-menu"><button class="mob-close">✕</button><a href="about.html">About</a><a href="services.html">Services</a><a href="results.html">Results</a><a href="insights.html">Insights</a><a href="contact.html" class="nav-cta">Get Free Audit</a></div>
+
+<div class="page-hero" style="padding-bottom:48px">
+  <div class="page-hero-bg"></div>
+  <div class="container" style="position:relative">
+    <span class="badge badge-gold" style="margin-bottom:20px">✦ Free Tools & Insights</span>
+    <h1 style="max-width:640px;margin-bottom:16px">Free copy tools for <em>pet & baby brands.</em></h1>
+    <p style="font-size:17px;max-width:500px">Use these tools to diagnose your copy, test your subject lines, and start improving your results today — before you spend a penny.</p>
+  </div>
+</div>
+
+<!-- FREE TOOLS -->
+<section class="section" style="padding-top:32px">
+  <div class="container">
+    <div class="section-header">
+      <span class="label">Free Tools</span>
+      <h2>Start here.</h2>
+    </div>
+    <div class="grid-2" style="gap:32px">
+
+      <!-- COPY AUDIT WIDGET -->
+      <div class="tool-card gold">
+        <span class="badge badge-gold" style="margin-bottom:16px">🔍 Instant Copy Audit</span>
+        <h3 style="margin-bottom:8px">Paste your copy. Get 3 things to fix.</h3>
+        <p style="margin-bottom:20px;font-size:14px">Drop in any copy — product description, email body, ad — and get specific, actionable feedback tailored to pet and baby brand audiences.</p>
+        <div class="form-group">
+          <label>Paste your copy here <span>*</span></label>
+          <textarea class="form-control" id="auditCopy" rows="5" placeholder="Paste your email, product description, ad copy, or landing page text here…"></textarea>
+        </div>
+        <button class="btn btn-gold" id="auditBtn" style="width:100%;justify-content:center">Analyse My Copy →</button>
+        <div id="auditResult"></div>
+      </div>
+
+      <!-- SUBJECT LINE TESTER -->
+      <div class="tool-card teal">
+        <span class="badge badge-teal" style="margin-bottom:16px">📧 Subject Line Scorer</span>
+        <h3 style="margin-bottom:8px">How strong is your email subject line?</h3>
+        <p style="margin-bottom:20px;font-size:14px">Enter your subject line and get an open-rate score (1–10) plus 3 stronger alternatives written for pet and baby brand audiences.</p>
+        <div class="form-group">
+          <label>Your email subject line <span>*</span></label>
+          <input type="text" class="form-control" id="subjectLine" placeholder="e.g. New arrivals in our baby skincare range 🌿"/>
+        </div>
+        <button class="btn btn-teal" id="slBtn" style="width:100%;justify-content:center">Score My Subject Line →</button>
+        <div id="slResult" style="display:none;margin-top:20px;background:var(--card);border:1px solid var(--border);border-radius:var(--radius-md);padding:24px"></div>
+      </div>
+
+    </div>
+
+    <!-- EMAIL OPT-IN / RESOURCE -->
+    <div style="background:linear-gradient(135deg,var(--ink2),var(--card));border:1px solid rgba(201,168,76,0.2);border-radius:var(--radius-lg);padding:40px;margin-top:32px;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center">
+      <div>
+        <span class="badge badge-gold" style="margin-bottom:14px">🎁 Free Download</span>
+        <h3 style="margin-bottom:10px">The Pet Brand Email Swipe File</h3>
+        <p style="margin-bottom:8px">21 proven email subject lines for pet supplement, food, accessory, and subscription brands. Copy, customise, and use immediately.</p>
+        <p style="font-size:13px;color:var(--slate)">Used by brands averaging 35–42% open rates.</p>
+      </div>
+      <div>
+        <form data-form="swipe" data-success="swipeSuccess" style="display:flex;flex-direction:column;gap:12px">
+          <input type="text" name="name" class="form-control" placeholder="Your first name" required/>
+          <input type="email" name="email" class="form-control" placeholder="Your email address" required/>
+          <button type="submit" class="btn btn-gold" style="justify-content:center">Send Me the Swipe File →</button>
+          <p style="font-size:11px;color:var(--slate);text-align:center">No spam. Unsubscribe anytime.</p>
+        </form>
+        <div class="success-box" id="swipeSuccess">
+          <div class="success-icon">📬</div>
+          <h3>On its way!</h3>
+          <p>Check your inbox for the swipe file.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ARTICLES -->
+<section class="section" style="background:var(--ink)">
+  <div class="container">
+    <div class="section-header">
+      <span class="label">Insights</span>
+      <h2>Copy lessons for pet & baby brands.</h2>
+    </div>
+    <div class="grid-3">
+      <div class="article-card">
+        <div class="article-img">📧</div>
+        <div class="article-body">
+          <div class="article-meta"><span class="badge badge-gold">Email</span><span class="article-date">March 2025</span></div>
+          <div class="article-title">Why pet brand emails get ignored (and the 3-word fix that changes everything)</div>
+          <p class="article-excerpt">Your subject line is a promise. Most pet brands break that promise before the email opens. Here's the framework that fixes it.</p>
+          <a href="contact.html" class="btn btn-outline btn-sm">Read Article →</a>
+        </div>
+      </div>
+      <div class="article-card">
+        <div class="article-img">🛒</div>
+        <div class="article-body">
+          <div class="article-meta"><span class="badge badge-teal">Product Pages</span><span class="article-date">Feb 2025</span></div>
+          <div class="article-title">The emotional buying trigger every baby brand is ignoring</div>
+          <p class="article-excerpt">New parents don't buy baby products. They buy confidence and calm. Here's how to write product pages that speak to that directly.</p>
+          <a href="contact.html" class="btn btn-outline btn-sm">Read Article →</a>
+        </div>
+      </div>
+      <div class="article-card">
+        <div class="article-img">📱</div>
+        <div class="article-body">
+          <div class="article-meta"><span class="badge badge-gold">Ad Copy</span><span class="article-date">Jan 2025</span></div>
+          <div class="article-title">How to write Facebook ads for pet products that don't get scrolled past</div>
+          <p class="article-excerpt">Pet owners scroll fast. Your ad has 1.7 seconds. Here's the hook formula that stops thumbs and starts conversations.</p>
+          <a href="contact.html" class="btn btn-outline btn-sm">Read Article →</a>
+        </div>
+      </div>
+      <div class="article-card">
+        <div class="article-img">💌</div>
+        <div class="article-body">
+          <div class="article-meta"><span class="badge badge-teal">Email</span><span class="article-date">Dec 2024</span></div>
+          <div class="article-title">The 5-email welcome sequence that turned a pet supplement brand's list into a revenue engine</div>
+          <p class="article-excerpt">A breakdown of the exact sequence that generated $3,200/month on autopilot for a dog supplement brand with 4,200 subscribers.</p>
+          <a href="contact.html" class="btn btn-outline btn-sm">Read Article →</a>
+        </div>
+      </div>
+      <div class="article-card">
+        <div class="article-img">🔍</div>
+        <div class="article-body">
+          <div class="article-meta"><span class="badge badge-gold">Strategy</span><span class="article-date">Nov 2024</span></div>
+          <div class="article-title">Your copy audit checklist: 12 things to review before you run another ad</div>
+          <p class="article-excerpt">Before spending more on traffic, fix the leaks in your copy. This checklist covers every touchpoint from ad to checkout.</p>
+          <a href="contact.html" class="btn btn-outline btn-sm">Read Article →</a>
+        </div>
+      </div>
+      <div class="article-card">
+        <div class="article-img">💰</div>
+        <div class="article-body">
+          <div class="article-meta"><span class="badge badge-teal">Conversion</span><span class="article-date">Oct 2024</span></div>
+          <div class="article-title">How price anchoring in product copy increased this baby brand's AOV by 34%</div>
+          <p class="article-excerpt">A simple reframe of how price is presented on the page — not a discount, not a redesign — lifted average order value by a third.</p>
+          <a href="contact.html" class="btn btn-outline btn-sm">Read Article →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section">
+  <div class="container text-center">
+    <h2 style="margin-bottom:16px">Ready to stop guessing and <em>start growing?</em></h2>
+    <p style="margin-bottom:32px;max-width:480px;margin-left:auto;margin-right:auto">Free tools are a start. If you want real results, let's talk. The audit takes 3 minutes to request and delivers specific, actionable feedback within 48 hours.</p>
+    <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap">
+      <a href="contact.html" class="btn btn-gold btn-lg">Apply to Work Together →</a>
+      <a href="contact.html#audit" class="btn btn-outline btn-lg">Get Free Audit</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><a href="index.html" class="logo">Tony Styles<span class="logo-sub">GrowthEngine · Copywriting</span></a><p style="margin-top:16px">Performance copywriting for pet and baby brands serious about growth.</p></div>
+      <div class="footer-col"><h5>Navigate</h5><a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="results.html">Results</a><a href="insights.html">Insights</a><a href="contact.html">Contact</a></div>
+      <div class="footer-col"><h5>Free Tools</h5><a href="insights.html">Copy Audit Widget</a><a href="insights.html">Subject Line Scorer</a><a href="insights.html">Email Swipe File</a></div>
+      <div class="footer-col"><h5>Contact</h5><a href="contact.html">Apply Now</a><a href="mailto:tony@growthengine.com">tony@growthengine.com</a></div>
+    </div>
+    <div class="footer-bottom"><p>© 2025 Tony Styles · GrowthEngine Copywriting</p><div class="footer-social"><a href="#">in</a><a href="#">𝕏</a><a href="#">◎</a></div></div>
+  </div>
+</footer>
+<script src="js/main.js"></script>
+</body>
+</html>
